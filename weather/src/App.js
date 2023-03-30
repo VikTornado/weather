@@ -28,7 +28,7 @@ function App() {
         <div className={'w-full h-screen z-[-1]'}>
             {nav ?
                 <img className={"top-0 left-0 w-full h-screen object-cover absolute z-[-1] object-cover"} src={img1} alt={"1"}/>
-                : <img className={"w-full h-full bg-cover absolute z-[-1] object-cover"} src={img2} alt={"2"}/>}
+                : <img className={"top-0 left-0 w-full h-screen object-cover absolute z-[-1] object-cover"} src={img2} alt={"2"}/>}
 
             {/*<div className={'w-full h-screen z-[-1] bg-cover px-5'} style={{backgroundImage: `url(${img})`}}>*/}
             <div className={"text-center pt-10 md:py-20"}>
@@ -68,7 +68,7 @@ function App() {
                         </div>
                     </div>
                 }
-                <div className={"max-w-[500px] flex m-auto text-2xl"}>
+                <div className={"max-w-[500px] flex m-auto text-2xl mt-4"}>
                     <button onClick={handleBg}
                             className={"w-full border text-white px-10 py-2 font-bold hover:text-cyan-500 rounded-2xl"}>Change
                         Background
