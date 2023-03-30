@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-// import img from './Assets/2.png'
+import img1 from './Assets/2.png'
+import img2 from './Assets/22.png'
 import axios from 'axios'
-import sky from './Assets/sky.mp4'
-import Nature from './Assets/WildlifeNature.mp4'
+// import sky from './Assets/sky.mp4'
+// import Nature from './Assets/WildlifeNature.mp4'
 
 function App() {
     const [nav, setNav] = useState(true)
@@ -24,14 +25,13 @@ function App() {
     }
 
     return (
-        <div className={'w-full h-screen z-[-1] object-cover absolute'}>
+        <div className={'w-full h-screen z-[-1]'}>
             {nav ?
-                <video className={"w-full h-full bg-cover absolute z-[-1] object-cover"} src={sky} autoPlay loop muted/>
-                : <video className={"w-full h-full bg-cover absolute z-[-1] object-cover"} src={Nature} autoPlay loop
-                         muted/>}
+                <img className={"top-0 left-0 w-full h-screen object-cover absolute z-[-1] object-cover"} src={img1} alt={"1"}/>
+                : <img className={"w-full h-full bg-cover absolute z-[-1] object-cover"} src={img2} alt={"2"}/>}
 
             {/*<div className={'w-full h-screen z-[-1] bg-cover px-5'} style={{backgroundImage: `url(${img})`}}>*/}
-            <div className={"text-center py-10 md:py-20"}>
+            <div className={"text-center pt-10 md:py-20"}>
                 <input className={"w-[50%] p-2 bg-white/20 rounded-lg text-white "}
                        value={location}
                        onChange={event => setLocation(event.target.value)}
@@ -39,7 +39,7 @@ function App() {
                        placeholder='Enter city'
                        type="text"/>
             </div>
-            <div className={"max-w-[700px] h-[700px] flex flex-col m-auto justify-between text-white z-20 relative"}>
+            <div className={"max-w-[700px] flex flex-col m-auto justify-between text-white z-20 relative"}>
                 <div className={"flex flex-col text-center items-center justify-center my-8"}>
                     <div className={"text-white z-20 font-bold text-2xl"}>
                         <p className={" p-8 text-2xl md:text-4xl uppercase"}>{data.name}</p>
