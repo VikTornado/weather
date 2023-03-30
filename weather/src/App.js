@@ -29,13 +29,13 @@ function App() {
             <div className={"max-w-[700px] h-[700px] flex flex-col m-auto justify-between text-white z-20 relative"}>
                 <div className={"flex flex-col text-center items-center justify-center"}>
                     <div className={"text-white z-20 font-bold text-2xl"}>
-                        <p className={"p-8"}>{data.name}</p>
+                        <p className={"p-8 text-4xl"}>{data.name}</p>
                     </div>
                     <div className={""}>
-                        {data.main ? <h1 className={"text-[136px]"}>{(data.main.temp.toFixed() - 273)} °</h1> : null}
+                        {data.main ? <h1 className={"text-[136px]"}>{(data.main.temp.toFixed() - 273)}°</h1> : null}
                     </div>
-                    <div className="description">
-                        {data.weather ? <p>{data.weather[0].main}</p> : null}
+                    <div>
+                        {data.weather ? <p className={'text-6xl text-bold'}>{data.weather[0].main}</p> : null}
                     </div>
                 </div>
                 {data.name !== undefined &&
